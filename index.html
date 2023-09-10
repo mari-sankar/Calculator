@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <script src="https://kit.fontawesome.com/8e4da32d54.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="menu-bar">
+      <label for="calculator-mode">Mode: </label>
+      <select id="calculator-mode" onchange="toggleCalculatorMode()">
+        <option value="basic">Basic</option>
+        <option value="scientific">Scientific</option>
+      </select>
+    </div>
+    
+    <div class="calculator">
+      <input type="text" id="display" disabled>
+      <button onclick="clearDisplay()" class="color">C</button>
+      <button onclick="appendToDisplay('(')">(</button>
+      <button onclick="appendToDisplay(')')">)</button>
+      <button onclick="removeLastCharacter()" class="color"><i class="fa-solid fa-arrow-left"></i></button>
+      <button onclick="appendToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('*')">*</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('/')">/</button>
+      <button onclick="appendToDisplay('.')">.</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="calculateResult()" class="color">=</button>
+    </div>
+  
+    <div class="scientific-calculator">
+      <input type="text" id="scientific-display" disabled>
+      <button onclick="appendToScientificDisplay('1')">1</button>
+      <button onclick="appendToScientificDisplay('2')">2</button>
+      <button onclick="appendToScientificDisplay('3')">3</button>
+      <button onclick="clearScientificDisplay()" class="color">C</button>
+      <button onclick="appendToScientificDisplay('4')">4</button>
+      <button onclick="appendToScientificDisplay('5')">5</button>
+      <button onclick="appendToScientificDisplay('6')">6</button>
+      <button onclick="appendToScientificDisplay('+')">+</button>
+      <button onclick="appendToScientificDisplay('7')">7</button>
+      <button onclick="appendToScientificDisplay('8')">8</button>
+      <button onclick="appendToScientificDisplay('9')">9</button>
+      <button onclick="appendToScientificDisplay('-')">-</button>
+      <button onclick="appendToScientificDisplay('.')">.</button>
+      <button onclick="appendToScientificDisplay('0')">0</button>
+      <button onclick="appendToScientificDisplay(Math.PI)">π</button>
+      <button onclick="appendToScientificDisplay('/')">/</button>
+      <button onclick="appendToScientificDisplay('Math.sqrt(')">√</button>
+      <button onclick="appendToScientificDisplay('Math.pow(')">^</button>
+      <button onclick="appendToScientificDisplay('%')">%</button>
+      <button onclick="appendToScientificDisplay('*')">*</button>  
+      <button onclick="appendToScientificDisplay('Math.sin(')">sin</button>
+      <button onclick="appendToScientificDisplay('Math.cos(')">cos</button>
+      <button onclick="appendToScientificDisplay('Math.tan(')">tan</button>
+      <button onclick="appendToScientificDisplay('Math.log10(')">log</button>
+      <button onclick="calculateScientificResult()" class="color">=</button>
+      <button onclick="appendToScientificDisplay('(')">(</button>
+      <button onclick="appendToScientificDisplay(')')">)</button>
+      <button onclick="removeLastScientificCharacter()" class="color"><i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+  
+    <script src="/script.js"></script>
+
+  </body>
+</html>
